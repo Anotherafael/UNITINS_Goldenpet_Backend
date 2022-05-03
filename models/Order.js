@@ -8,7 +8,7 @@ const Order = mongoose.model('Order', {
   date: Date,
   service: [{
     name: String,
-    price: Number,
+    price: Number
   }],
 })
 

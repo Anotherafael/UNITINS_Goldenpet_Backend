@@ -1,11 +1,8 @@
 const router = require('express').Router()
 
-//Model
 const Service = require('../models/Service')
 
-// Routes
-
-// Create Service
+/* It's creating a service. */
 router.post('/', async (req, res) => {
     
     const {name, price} = req.body
@@ -28,6 +25,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+/* It's getting all services. */
 router.get('/', async (req, res) => {
 
     try {
@@ -44,6 +42,7 @@ router.get('/', async (req, res) => {
     
 })
 
+/* It's getting a service by id. */
 router.get('/:id', async (req, res) => {
     
     const id = req.params.id
@@ -58,6 +57,7 @@ router.get('/:id', async (req, res) => {
     
 })
 
+/* It's updating a service by id. */
 router.patch('/:id', async (req, res) => {
     
     const id = req.params.id
@@ -84,6 +84,7 @@ router.patch('/:id', async (req, res) => {
     
 })
 
+/* It's deleting a service by id. */
 router.delete('/:id', async (req, res) => {
     
     const id = req.params.id

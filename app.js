@@ -16,7 +16,7 @@ app.use(express.json())
 
 /* Importing the routes from the routes folder and using them in the app. */
 const orderRoute = require('./routes/orderRoutes')
-app.use('', orderRoute)
+app.use('/order', orderRoute)
 
 const serviceRoute = require('./routes/serviceRoutes')
 app.use('/service', serviceRoute)
